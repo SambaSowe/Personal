@@ -18,7 +18,7 @@ You can find a GitHub tutorial [here](https://github.com/AguaClara/aguaclara_tut
 
 1. Below this, write a sentence or two about yourself:
 
-<!--- Fill you answer here. --->
+Hello, my name is Samba and I am a professional soccer player.
 
 
 
@@ -44,7 +44,7 @@ To signify a header, use `#`. The more `#` you use, the smaller the header gets.
 
 1. Make a header of similar size as Header 3 with whatever text you want:
 
-<!--- Fill you answer here. --->
+### Hello from the other sideeeeeeeeeeeeeeeeeee
 
 ## Emphasis
 There are several different ways to emphasize text: *italics*, **bold**, ***combined***, and ~~strikethrough~~.
@@ -55,9 +55,10 @@ There are several different ways to emphasize text: *italics*, **bold**, ***comb
 * To get ~~strikethrough~~, your text should be enclosed in double tildes as such `~~strikethrough~~`
 
 1. Write 4 of your favorite words using each type of emphasis:
-
-<!--- Fill you answer here. --->
-
+*Hella*
+**Bruh**
+***Chill***
+~~Cringe~~
 
 ## Lists
 Lists are very easy to do. For a bulleted list, use the asterisk and for a numbered list, use the number followed by a period. Hitting `Enter` after a bullet or number continues the list automatically. Hitting `Enter` followed by `Tab` gets you a sub item for a bulleted list. For example:
@@ -68,7 +69,9 @@ Lists are very easy to do. For a bulleted list, use the asterisk and for a numbe
 
 1. Now try it out for yourself. Write down a list of things you hope to achieve this semester, and elaborate on them with sub items:
 
-<!--- Fill you answer here. --->
+* Want to run experiments
+  * Find optimal coagulant levels
+  * Discover how humic acid responds to different coagulant levels
 
 ## Images
 To input images, you'll either need an image URL or a file path to your image. For AguaClara work, your repository should have a folder for images where you can get an image URL or file path from. In this tutorial, I've made an image folder with a picture in the `aguaclara_tutorial` repository.
@@ -100,7 +103,7 @@ Image with Height and Width Adjusted:
 
 1. Make an images folder in your personal repository, and import an image of your hometown or pet from that folder. Do it unformatted using the image URL and the relative file path method, then do it again but instead change the height and width of your image:
 
-<!--- Fill you answer here. --->
+![Annie In the Sink](./Images/Annie_In_the_Sink.jpg)
 
 
 
