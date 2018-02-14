@@ -151,7 +151,11 @@ When making tables, it's not important that the lines match up. For example, the
 
 1. Create a table listing your 3 favorite animals, foods, books, and places on campus. Try out the different cell justifications:
 
-<!--- Fill you answer here. --->
+| Animals  | Foods    | Books | Places |
+|:-------- |:-------- |:----- |:------ |
+| Cats | Item Two |       |        |
+|          |          |       |        |
+|          |          |       |        |
 
 
 
