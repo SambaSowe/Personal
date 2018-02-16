@@ -18,7 +18,7 @@ You can find a GitHub tutorial [here](https://github.com/AguaClara/aguaclara_tut
 
 1. Below this, write a sentence or two about yourself:
 
-Hello, my name is Samba and I am a professional soccer player.
+Hello, my name is Samba and I love to play soccer.
 
 
 
@@ -174,12 +174,12 @@ For larger code blocks where you report multiple lines of code, you always start
 
 1. Below, write a Python print function with a different string using syntax highlighting:
 
+`print('Black Panther is a great movie')`
+
+2. Now write a block of Python code for that same print statement:
 ```python
 print('Black Panther is a great movie')
 ```
-2. Now write a block of Python code for that same print statement:
-
-print('Black Panther is a great movie')
 
 
 ## LaTeX Equations
@@ -199,6 +199,9 @@ $$ y = mx + b $$
 2. For the second line, use `Hydrogen: Run and Move Down` (`Shift + Enter`).
 3. For the remaining code, highlight it with your cursor and use `Hydrogen: Run`. What is the difference between the three?
 
+  1. Just puts a check mark next to the line of code.
+  2. Runs the code and puts the cursor at the beginning of the next line.
+  3. Runs all of the highlighted code.
 ```python
 from aide_design.play import*
 
@@ -226,13 +229,13 @@ These questions are meant to test what you've learned from the Python Basics tut
 1. Write a conditional statement with 3 conditions: when x is 10, when x is 1, and when x is anything other than 1 or 10. For each condition, have your code print what the value is or isn't.
 
 ```python
-x = 9
+x = 1
 if x == 10:
   print(x)
 elif x == 1:
   print(x)
 else:
-  print(x)
+  print('x is not 1 or 10')
 ```
 
 2. Write a `for` loop that takes a variable with an initial value of 0, and adds the current index to the previous value of that variable (i.e. you variable should grow in size every iteration). Perform the iteration 20 times, and have the final value be printed at the end.
@@ -280,18 +283,37 @@ $$ D = \frac{k_BT}{6\pi\eta r} $$
 from scipy.constants import Boltzmann as kB_sc # I've imported the unitless value for kB from SciPy
 
 kB = kB_sc * u.joule / u.kelvin # I've given kB units for you in J/K; you can use the kB variable to give you Boltzmann's constant with units
-
-T = 300*u.Kelvin
-eta = 10*u.kilogram/(u.meter*u.second)
-r = .1*u.meter
-def diffusionCalc(T, eta, r)
-
+from aide_design.play import*
+def diffusionCalc(T, eta, r):
+  T = T*u.kelvin
+  eta = eta*u.kilogram/u.meter/u.second
+  r = r*u.meter
+  D = kB*T/(6*(np.pi)*eta*r).to_base_units()
+  return D
+diffusionCalc(300,.1,.1)
 ```
 
 6. You have a pipe with a radius of 0.2 m with water flowing in it at 2 m<sup>3</sup>/s. You want to see how the Reynolds Number changes as viscosity changes due to a change in temperature from 0 to 200<sup>o</sup>C. Create a plot of Reynolds Number against Temperature in Kelvin to show a relationship. Make sure your plot has a title, labeled axes, and axes grid. You can use functions from `physchem` like `pc.re_pipe` and `pc.viscosity_kinematic`. *(Hint: Make an array of temperatures to input into the `pc.viscosity_kinematic` function)*. Make sure to save you plot to your images folder in your personal repository, and display it below using `plt.show()` and a relative file path to the image.
 
 ```python
 from aide_design.play import*
+flowRate = 2
+radius = .2
+Area = np.pi*radius*radius
+T = np.array([273,323,373,423,473])
+velocity = flowRate/Area
+velocity
+plt.plot(T,pc.re_pipe(velocity,2*radius,pc.viscosity_kinematic(T)),'-',label = 'Reynolds Number')
+plt.xlabel('Temperature (Kelvins)')
+plt.ylabel('Reynolds Number')
+plt.title('Reynolds Number vs Temperature')
+plt.minorticks_on()
+plt.grid(which='major')
+plt.grid(which = 'minor')
+plt.legend(loc = 'lower right', ncol = 1)
+plt.tight_layout()
+plt.savefig('/Users/Sowe/github/Personal/Images/Reynolds_Number.png')
+plt.show()
 ```
 
 # Teletype Basics
@@ -300,13 +322,16 @@ In this section you and your team can practice using Teletype together.
 1. Create a portal for your team members to join. Have them write you words of  encouragement in the space below, and be sure they sign their name next to their encouragements.
 
 <!--- Fill you answer here. --->
-
+You rock! - Peter McGurk
+YOU ARE THE STAR OF CHEME
+---Vanessa Qi
 
 
 
 2. Have you other team members create a portal for you to join. In their Markdown file, write them something encouraging, and sign your name.
 
-<!--- Fill you answer here. --->
+I wrote in Vanessa and Peter's portals. -Samba Sowe
+
 
 
 # GitHub Basics
